@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    z-index: 1;
+}
+#nav h4{
+    cursor: pointer;
+}
+#nav{
+    height: 5vh;
+    width: 30%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50% , 0);
+    border-radius: 50px;
+    background-color: black;
+    z-index: 100;
+}
+#home-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-h1{
+    z-index: 8;
+    width: 60%;
+    font-size: 2.5vw;
+    text-align: center;
+    /* this is for , text show over the image */
+}
+#about-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#skills-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact-page{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#crsr{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50% , -50%);
+    z-index: 12;
+}
+
+.image-trail {
+    position: absolute;
+    inset: 0;
+
+    width: 200px;
+    height: 140px;
+
+    border-radius: 20px;
+
+    object-fit: cover;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
