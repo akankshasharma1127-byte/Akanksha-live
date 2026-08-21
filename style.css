@@ -492,17 +492,237 @@ html , body{
         border-bottom: 1px solid #eee;
     }
 }
+/* =========================
+   CONTACT PAGE
+========================= */
+
 #contact-page{
     height: 100vh;
     width: 100vw;
     background-color: white;
     position: absolute;
-    left: 0%;
-    top: 0%;
-    z-index:0;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    padding: 70px 8% 30px;
+    overflow-y: auto;
+    color: #111;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.contact-header{
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px;
+}
+
+.contact-header p{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.contact-header h1{
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.contact-line{
+    width: 45px;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto 15px;
+}
+
+.contact-header span{
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* =========================
+   CONTACT CONTENT
+========================= */
+
+.contact-container{
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 50px;
+}
+
+
+/* LEFT */
+
+.contact-intro{
+    padding-top: 10px;
+}
+
+.contact-intro h2{
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.contact-small-line{
+    width: 45px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+.contact-intro p{
+    max-width: 380px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-details{
+    width: 100%;
+}
+
+.contact-item{
+    min-height: 65px;
+
+    display: grid;
+    grid-template-columns: 55px 1fr 30px;
+    align-items: center;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.contact-icon{
+    width: 38px;
+    height: 38px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-radius: 50%;
+    background-color: #f5f5f5;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact-item h3{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.contact-item p{
+    font-size: 12px;
+    color: #555;
+}
+
+.contact-arrow{
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOTTOM BOX
+========================= */
+
+.contact-bottom{
+    max-width: 1100px;
+    margin: 35px auto 0;
+
+    min-height: 110px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px 35px;
+    gap: 30px;
+}
+
+.telegram-icon{
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background-color: #071b38;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.contact-bottom h3{
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.contact-bottom p{
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.thank-you{
+    margin-left: auto;
+    font-family: cursive;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px){
+
+    #contact-page{
+        padding: 70px 5% 30px;
+    }
+
+    .contact-header h1{
+        font-size: 32px;
+    }
+
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-intro h2{
+        font-size: 25px;
+    }
+
+    .contact-bottom{
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .thank-you{
+        font-size: 18px;
+    }
 }
 
 #crsr{
