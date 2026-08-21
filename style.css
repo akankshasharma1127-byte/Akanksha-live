@@ -62,6 +62,7 @@ html , body{
     z-index: 0;
     padding: 100px 8% 40px;
     overflow-y: auto;
+    color: black;
 }
 .about-container{
     max-width: 1100px;
@@ -72,7 +73,7 @@ html , body{
     gap: 70px;
 }
 
-.about-image{
+/* .about-image{
     width: 330px;
     height: 330px;
     flex-shrink: 0;
@@ -83,21 +84,131 @@ html , body{
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    
+} */
+
+
+.about-image {
+    position: relative;
+
+    width: 430px;
+    height: 430px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.profile-circle {
+    width: 390px;
+    height: 390px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 7px solid #fff;
+
+    box-shadow:
+        0 0 0 2px #eee,
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    background: #eee;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   DOT PATTERN
+========================= */
+
+.dot-pattern {
+    position: absolute;
+
+    top: 20px;
+    left: -20px;
+
+    width: 120px;
+    height: 100px;
+
+    background-image: radial-gradient(
+        #999 1.5px,
+        transparent 1.5px
+    );
+
+    background-size: 25px 25px;
+
+    opacity: 0.8;
+}
+
+
+/* =========================
+   DECORATIVE CIRCLE LINE
+========================= */
+
+.circle-line {
+    position: absolute;
+
+    right: -5px;
+    bottom: 35px;
+
+    width: 90px;
+    height: 130px;
+
+    border-right: 2px solid #222;
+    border-bottom: 2px solid #222;
+
+    border-radius: 0 0 80px 0;
+
+    transform: rotate(-20deg);
+
+    z-index: 3;
+}
+
+
+.circle-line span {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    background: #111;
+
+    border-radius: 50%;
+
+    right: 75px;
+    bottom: -8px;
+}
+
 
 .about-content{
     max-width: 600px;
 }
 
 .about-subtitle{
-    color: #888;
+    color: black;
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
 .about-content h1{
-    color: #182b49;
+    color: black;
     font-size: 48px;
     margin-bottom: 15px;
 }
@@ -105,20 +216,21 @@ html , body{
 .about-line{
     width: 45px;
     height: 3px;
-    background-color: #182b49;
+    background-color: black;
     margin-bottom: 25px;
 }
 
 .about-content p{
-    color: #666;
-    font-size: 16px;
+    color: black;
+    /* color: red; */
+    font-size: 1.2vw;
     line-height: 1.7;
     margin-bottom: 15px;
 }
 
 .resume-btn{
     border: none;
-    background-color: #182b49;
+    background-color: black;
     color: white;
     padding: 14px 25px;
     border-radius: 30px;
@@ -134,10 +246,12 @@ html , body{
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     text-align: center;
+    
 }
 
 .about-card{
     padding: 10px;
+    border-right: 2px solid rgba(120, 116, 116, 0.793);
 }
 
 .about-card h3{
@@ -146,13 +260,13 @@ html , body{
 }
 
 .about-card h4{
-    color: #222;
+    color: black;
     font-size: 16px;
     margin-bottom: 10px;
 }
 
 .about-card p{
-    color: #666;
+    color: black;
     font-size: 13px;
     line-height: 1.5;
 }
