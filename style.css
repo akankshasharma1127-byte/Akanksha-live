@@ -51,17 +51,110 @@ html , body{
     text-align: center;
     /* this is for , text show over the image */
 }
+
 #about-page{
     height: 100vh;
     width: 100vw;
-    background-color: white;(186, 48, 48);
+    background-color: white;
     position: absolute;
     top: 0%;
     left: 0%;
     z-index: 0;
+    padding: 100px 8% 40px;
+    overflow-y: auto;
+}
+.about-container{
+    max-width: 1100px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 70px;
+}
+
+.about-image{
+    width: 330px;
+    height: 330px;
+    flex-shrink: 0;
+}
+
+.about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-content{
+    max-width: 600px;
+}
+
+.about-subtitle{
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-content h1{
+    color: #182b49;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.about-line{
+    width: 45px;
+    height: 3px;
+    background-color: #182b49;
+    margin-bottom: 25px;
+}
+
+.about-content p{
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.resume-btn{
+    border: none;
+    background-color: #182b49;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.about-cards{
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.about-card{
+    padding: 10px;
+}
+
+.about-card h3{
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.about-card h4{
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about-card p{
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
 }
 #skills-page{
     height: 100vh;
