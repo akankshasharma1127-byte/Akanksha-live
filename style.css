@@ -133,9 +133,7 @@ html , body{
 }
 
 
-/* =========================
-   DOT PATTERN
-========================= */
+/
 
 .dot-pattern {
     position: absolute;
@@ -157,9 +155,6 @@ html , body{
 }
 
 
-/* =========================
-   DECORATIVE CIRCLE LINE
-========================= */
 
 .circle-line {
     position: absolute;
@@ -270,17 +265,232 @@ html , body{
     font-size: 13px;
     line-height: 1.5;
 }
-#skills-page{
+  #skills-page{
     height: 100vh;
     width: 100vw;
     background-color: white;
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     z-index: 0;
+    padding: 70px 8% 30px;
+    overflow-y: auto;
+    color: #111;
+}
+
+
+/
+
+.skills-header{
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.skills-header p{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.skills-header h1{
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.skills-line{
+    width: 45px;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto 15px;
+}
+
+.skills-header span{
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+
+
+.skills-content{
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 45px;
+}
+
+
+.technical-skills h2,
+.skill-categories h2,
+.technologies h2{
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.skill{
+    margin-bottom: 18px;
+}
+
+.skill-name{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-name span{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.skill-bar{
+    width: 100%;
+    height: 5px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress{
+    height: 100%;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+
+/
+.category-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.category-card{
+    min-height: 175px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.category-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.category-icon{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.category-card h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.category-card p{
+    font-size: 11px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.category-card span{
+    font-size: 10px;
+    color: #333;
+    line-height: 1.4;
+}
+
+
+.technologies{
+    max-width: 1100px;
+    margin: 35px auto 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.technology-list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+}
+
+.technology{
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+
+.technology b{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.technology span{
+    font-size: 10px;
+    color: #555;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 900px){
+
+    #skills-page{
+        padding: 70px 5% 30px;
+    }
+
+    .skills-content{
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .category-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technology-list{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+@media (max-width: 600px){
+
+    .skills-header h1{
+        font-size: 32px;
+    }
+
+    .skills-header span{
+        font-size: 12px;
+    }
+
+    .category-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .technology-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technology{
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
 }
 #contact-page{
     height: 100vh;
