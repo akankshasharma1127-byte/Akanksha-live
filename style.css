@@ -264,77 +264,93 @@ html , body{
     color: black;
     font-size: 13px;
     line-height: 1.5;
-}
-  #skills-page{
+}/* =========================
+   SKILLS PAGE
+========================= */
+
+#skills-page{
     height: 100vh;
     width: 100vw;
-    background-color: white;
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    padding: 70px 8% 30px;
+
+    padding: 65px 7% 30px;
     overflow-y: auto;
     color: #111;
 }
 
 
-/
+/* =========================
+   SKILLS HEADER
+========================= */
 
 .skills-header{
     text-align: center;
     max-width: 750px;
-    margin: 0 auto 35px;
+    margin: 0 auto 42px;
 }
 
 .skills-header p{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
     margin-bottom: 8px;
+    color: #555;
 }
 
 .skills-header h1{
     font-size: 42px;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
 .skills-line{
-    width: 45px;
+    width: 42px;
     height: 3px;
-    background-color: black;
-    margin: 0 auto 15px;
+    background-color: #111;
+    margin: 0 auto 16px;
 }
 
 .skills-header span{
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
     color: #555;
 }
 
 
-
+/* =========================
+   MAIN SKILLS CONTENT
+========================= */
 
 .skills-content{
-    max-width: 1100px;
-    margin: auto;
+    max-width: 1120px;
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 36% 64%;
     gap: 45px;
 }
 
 
+/* =========================
+   TECHNICAL SKILLS
+========================= */
+
 .technical-skills h2,
 .skill-categories h2,
 .technologies h2{
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 .skill{
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 }
 
 .skill-name{
@@ -345,110 +361,136 @@ html , body{
 }
 
 .skill-name span{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 }
 
 .skill-bar{
     width: 100%;
     height: 5px;
-    background-color: #e5e5e5;
+    background-color: #e8e8e8;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .skill-progress{
     height: 100%;
-    background-color: #111;
+    background-color: #182238;
     border-radius: 10px;
 }
 
 
-/
+/* =========================
+   SKILL CATEGORIES
+========================= */
+
 .category-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 18px;
 }
 
 .category-card{
     min-height: 175px;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    padding: 18px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 7px;
+
+    padding: 18px 14px;
+
     text-align: center;
+
     transition: 0.3s;
 }
 
 .category-card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
 }
 
 .category-icon{
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 21px;
+    margin-bottom: 9px;
 }
 
 .category-card h3{
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
 }
 
 .category-card p{
-    font-size: 11px;
+    font-size: 10px;
     color: #555;
     line-height: 1.5;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
 .category-card span{
-    font-size: 10px;
+    display: block;
+    font-size: 9px;
     color: #333;
     line-height: 1.4;
 }
 
 
+/* =========================
+   TECHNOLOGIES & TOOLS
+========================= */
+
 .technologies{
-    max-width: 1100px;
-    margin: 35px auto 0;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    padding: 20px;
+    max-width: 1120px;
+    margin: 38px auto 0;
+
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 20px;
+}
+
+.technologies h2{
+    margin-bottom: 20px;
 }
 
 .technology-list{
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 10px;
+    gap: 0;
 }
 
 .technology{
-    min-height: 70px;
+    min-height: 80px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     text-align: center;
-    border-right: 1px solid #eee;
+
+    border-right: 1px solid #eeeeee;
 }
 
-.technology b{
-    font-size: 18px;
-    margin-bottom: 8px;
+.technology:last-child{
+    border-right: none;
+}
+
+.technology i{
+    font-size: 32px;
+    margin-bottom: 9px;
 }
 
 .technology span{
     font-size: 10px;
     color: #555;
+    font-weight: 500;
 }
 
 
 /* =========================
-   MOBILE RESPONSIVE
+   TABLET
 ========================= */
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
 
     #skills-page{
         padding: 70px 5% 30px;
@@ -456,11 +498,11 @@ html , body{
 
     .skills-content{
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 40px;
     }
 
     .category-grid{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .technology-list{
@@ -469,7 +511,15 @@ html , body{
 }
 
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px){
+
+    #skills-page{
+        padding: 70px 5% 30px;
+    }
 
     .skills-header h1{
         font-size: 32px;
@@ -492,6 +542,8 @@ html , body{
         border-bottom: 1px solid #eee;
     }
 }
+
+
 /* =========================
    CONTACT PAGE
 ========================= */
@@ -596,8 +648,7 @@ html , body{
 .contact-details{
     width: 100%;
 }
-
-.contact-item{
+    .contact-item{
     min-height: 65px;
 
     display: grid;
@@ -605,9 +656,11 @@ html , body{
     align-items: center;
 
     border-bottom: 1px solid #e5e5e5;
-}
 
-.contact-icon{
+    text-decoration: none;
+    color: #111;
+}
+    .contact-icon{
     width: 38px;
     height: 38px;
 
