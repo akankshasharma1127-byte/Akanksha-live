@@ -120,4 +120,7 @@ window.addEventListener("mousemove", (e) => {
         lastX = e.clientX;
         lastY = e.clientY;
     }
-});
+}); 
+
+
+// perfect till now
