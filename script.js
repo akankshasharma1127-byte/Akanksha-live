@@ -60,6 +60,7 @@ const images = [
     "images/img-6.jpeg",
     "images/img-7.jpeg",
     "images/img-8.jpeg",
+    "images/img-9.jpeg",
 ];
 
 const container = document.getElementById("home-page");
