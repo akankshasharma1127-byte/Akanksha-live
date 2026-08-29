@@ -17,6 +17,9 @@ html , body{
 #nav h4{
     cursor: pointer;
 }
+.nav-icon{
+    display: none;
+}
 #nav{
     height: 5vh;
     width: 30%;
@@ -850,6 +853,8 @@ html , body{
     #home-h1 {
         width: 100%;
         font-size: clamp(32px, 9vw, 55px);
+        font-weight: 400;
+        /* iss size ko set kena shi se dhek ke , ki kis size pr aacha lg raha hai home page , bake page tho aache lh rahe hai   */
         line-height: 1.15;
         word-wrap: break-word;
     }
@@ -1193,7 +1198,8 @@ html , body{
 
     #nav {
         position: fixed;
-        top: 12px;
+        top: auto;
+        bottom: max(12px, env(safe-area-inset-bottom));
         left: 16px;
         width: calc(100% - 32px);
         height: 48px;
@@ -1203,11 +1209,25 @@ html , body{
         justify-content: space-around;
         flex-wrap: nowrap;
         gap: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
     }
 
     #nav h4 {
-        font-size: 14px;
-        padding: 8px 4px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    #nav .nav-label {
+        display: none;
+    }
+
+    #nav .nav-icon {
+        display: block;
+        font-size: 23px;
+        line-height: 1;
     }
 
     #home-page,
@@ -1221,14 +1241,15 @@ html , body{
     }
 
     #home-page {
-        padding-top: 88px;
+        padding-top: 32px;
+        padding-bottom: 84px;
     }
 
     #about-page,
     #skills-page,
     #contact-page {
-        padding-top: 88px;
-        padding-bottom: 36px;
+        padding-top: 60px;
+        padding-bottom: 92px;
     }
 
     .about-image {
@@ -1335,8 +1356,8 @@ html , body{
     }
 
     #nav h4 {
-        font-size: 12px;
-        padding-inline: 2px;
+        width: 42px;
+        height: 42px;
     }
 
     #home-h1 {
